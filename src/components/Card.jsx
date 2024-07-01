@@ -1,20 +1,35 @@
-const Card = () => {
+import React, { useState } from 'react'
+
+export default function Card() {
     return (
         <div className="card">
             <div className="topo">
-                <h1 className='title'>Login</h1>
+                <div className="title">
+                    <h1>Login</h1>
+                </div>
             </div>
             <div className="meio">
                 <div className="imputs">
-                    <imput className="user" type='text' required>Usuário</imput>
-                    <imput className="password" type='password' required>Senha</imput>
+                    <form action="">
+                        <div className="login">
+                            <label htmlFor="">Login</label>
+                            <input type="text" />
+                        </div>
+                        <div className="senha">
+                            <label htmlFor="">Senha</label>
+                            <input type="password"/>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div className="fim">
-                <div className="button">
-                    <button type='submit'>Entrar</button>
-                    <link rel="stylesheet" href="#" className="forget" />Esqueceu sua senha?
+                <div className="botao">
+                    <button type="submit">Entrar</button>
                 </div>
+                <div className="esqueci">
+                    <a href="#">Esqueci minha senha</a>
+                </div>  
+        
             </div>
         </div>
     )
